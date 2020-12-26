@@ -1,0 +1,28 @@
+{
+    "name": "ajourquin/module-custom-product-filter",
+    "description": "Create a custom product filter",
+    "version": "1.0.0",
+    "type": "magento2-module",
+    "license": "OSL-3.0",
+    "authors": [
+        {
+            "name": "Aurélien Jourquin",
+            "email": "aurelien@growzup.com"
+        }
+    ],
+    "homepage": "https://github.com/ajourquin/module-custom-product-filter",
+    "keywords": [
+        "magento",
+        "magento2",
+        "sorting",
+        "custom"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Ajourquin\\CustomProductFilter\\": ""
+        }
+    }
+}

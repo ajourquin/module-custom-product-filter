@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Aurélien Jourquin <aurelien@growzup.com>
+ * @link http://www.ajourquin.com
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!--  Add custom filter to layered nav -->
+    <type name="Magento\Catalog\Model\Layer\FilterList">
+        <plugin name="ajourquin_add_custom_product_filter" type="Ajourquin\CustomProductFilter\Plugin\Catalog\Model\Layer\FilterList" />
+    </type>
+
+    <!--  Add custom bucket to buckets list-->
+    <type name="Magento\Search\Model\SearchEngine">
+        <plugin name="ajourquin_add_custom_bucket" type="Ajourquin\CustomProductFilter\Plugin\Search\Model\SearchEngine" />
+    </type>
+
+    <!--  Set custom bucket query-->
+    <type name="Magento\Elasticsearch\SearchAdapter\Query\Builder\Aggregation">
+        <plugin name="ajourquin_add_custom_bucket_query" type="Ajourquin\CustomProductFilter\Plugin\Elasticsearch\SearchAdapter\Query\Builder\Aggregation" />
+    </type>
+</config>
